@@ -1,0 +1,248 @@
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Neutral background color */
+    height: 100%; /* Full height */
+}
+
+header {
+    background-color: #5A4FCF;
+    color: white;
+    padding: 10px 20px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+nav {
+    display: flex; /* Using Flexbox */
+    justify-content: space-between; /* Space between left and right items */
+    align-items: center; /* Center items vertically */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+nav a:first-child {
+    margin-right: auto; /* Pushes all other elements to the right */
+}
+main {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: calc(100vh - 60px); /* Full viewport height minus header height */
+    text-align: center; /* Ensures text is centered */
+    box-sizing: border-box;/* Includes padding in the element's total dimensions */
+}
+
+#search-section {
+    width: 100%; /* Full width of the container */
+    justify-content: center; /* Center vertically */
+    align-items: center;
+    max-width: 600px; /* Limits the maximum width for larger screens */
+}
+
+input[type="text"] {
+	border: 2px solid #5A4FCF; /* Updated border color */
+    width: 70%; /* Adjusts width of the input field */
+    padding: 10px;
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+
+.search-area {
+    text-align: center; /* Center the text title */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust to center the container */
+    width: 100%; /* Use full width for small screens or set a max-width for larger screens */
+}
+
+.search-area h1 {
+    font-size: 2em; /* Large font size for the title */
+    margin-bottom: 20px; /* Space between title and search box */
+}
+
+.search-box {
+    display: inline-block; /* Make the search box align to the center */
+    position: relative; /* Position relative to place the search icon */
+}
+
+#stock-ticker {
+    height: 40px;
+    width: 300px; /* Set the width of the search input */
+    padding: 10px;
+    border: 2px solid #000;
+    border-right: none; /* Remove the right border */
+    font-size: 1em;
+}
+
+#search-button {
+    height: 44px; /* Match the height with the input field */
+    border: 2px solid #000;
+    background-color: #5A4FCF; ;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#search-button .fa-search {
+    color: #000;
+}
+.stock-profile {
+	position: absolute;
+    top: 70px; /* Adjust as needed, depending on the height of your header */
+    left: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the start of the flex container (top left) */
+    padding: 10px; /* Provide some spacing */
+}
+
+.stock-profile h2, .stock-profile p {
+    margin: 0; /* Remove default margins */
+}
+
+.stock-profile label, .stock-profile input, .stock-profile button {
+    margin-top: 10px; /* Space out form elements */
+}
+
+#quantity {
+    width: 100px; /* Width of the quantity input */
+    padding: 5px;
+    margin-right: 10px; /* Space between the input and the button */
+}
+
+#buy-button {
+    padding: 5px 10px;
+    background-color: #4CAF50; /* A nice "buy" green */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#buy-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+/* Overall layout */
+.main-content {
+    display: block; /* Allows you to manage the layout with more control */
+     flex-direction: column;
+    justify-content: space-between; /* This will put space between the items */
+}
+/* Stock price info styles */
+.stock-price-info {
+	position: absolute;
+    top: 70px; /* Match the top position of .stock-profile for alignment */
+    right: 20px; /*
+    text-align: right; /* Align text to the right for top right placement */
+    padding: 10px;
+}
+
+.price {
+    font-size: 2em; /* Large font size for the price */
+    color: #333; /* Dark text for visibility */
+}
+
+.change {
+    font-size: 1.2em; /* Slightly smaller font size for change */
+    margin: 5px 0; /* Spacing for aesthetic */
+}
+
+.change.green {
+    color: #4CAF50; /* Green color for positive changes */
+}
+
+.change.red {
+    color: #F44336; /* Red color for negative changes */
+}
+
+.timestamp {
+    font-size: 0.9em; /* Smaller font size for date and time */
+    color: #666; /* Lighter text color for less emphasis */
+}
+/* This ensures the stock info container is centered on the page, replacing the search bar */
+.stock-summary {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center the container */
+    width: 100%; /* Use full width for small screens or set a max-width for larger screens */
+    text-align: center; /* Center the text */
+}
+
+.company-info {
+    position: absolute;
+    bottom: 7%; /* Center vertically */
+    left: 1%; /* Adjust the value as needed to create space */
+}
+.stock-details h2, .stock-details .summary h3, .stock-details .company-info h3 {
+    text-align: center;
+}
+
+.stock-details p, .stock-details a {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.stock-details .summary, .stock-details .company-info {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.quantity-form {
+	 display: none; 
+    /* Other styles... */
+    position: absolute;
+    bottom: 55%; /* Center vertically */
+    left: 1%; 
+}
+
+.quantity-form input[type="text"] {
+	
+    width: 50%; /* Adjust as needed to make the input shorter */
+    margin: auto; /* This will center the input if the parent has a defined width */
+    display: block; /* This ensures the margin:auto takes effect */
+}
+.quantity-form input[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px;
+    cursor: pointer; /* Pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger font size */
+}
+
+.quantity-form input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+
+.stock-details .summary h3, .stock-details .company-info h3 {
+    margin-top: 0;
+}
+button {
+	background-color: #5A4FCF; 
+    padding: 10px 20px;
+    cursor: pointer; /* Pointer on hover */
+}
+button i {
+    color: white; /* Ensures the icon is visible against the button background */
+    font-size: 16px; /* Adjust the size of the icon as needed */
+    cursor: pointer;
+}
+/* Continue with other styles... */

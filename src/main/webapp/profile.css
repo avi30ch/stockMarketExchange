@@ -1,0 +1,73 @@
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Neutral background color */
+    height: 100%; /* Full height */
+}
+
+header {
+    background-color: #5A4FCF;
+    color: white;
+    padding: 10px 20px;
+    /* Ensure the header is not pushed down by any margins from elements above */
+}
+
+/* This container will hold the header and main content, helping to position them correctly */
+.container {
+    position: relative;
+}
+
+main {
+    width: 100%;
+    /* Removed position: relative; it's not needed if we're positioning relative to .container */
+}
+
+.portfolio-summary {
+    position: absolute;
+    top: 50px; /* Adjust this value to the height of your header */
+    left: 0;
+    right: 0; /* This combined with left: 0 will stretch the element full width */
+    max-width: 800px;
+    margin: 0 auto; /* Center in the page */
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+nav {
+    display: flex; 
+    justify-content: space-between; /* Space between left and right items */
+    align-items: center; /* Center items vertically */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+nav a:first-child {
+    margin-right: auto; /* Pushes all other elements to the right */
+}
+
+
+
+.stock-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    /* Other styling */
+}
+
+/* More styles for buttons, inputs, positive/negative change indicators, etc. */

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - JoesStocks</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+        	<a href="index.html">JoesStocks</a>
+            <a href="index.html">Home/Search</a>
+            <a href="login.html">Login/SignUp</a>
+        </nav>
+    </header>
+    <main>
+        <div id="search-area">
+            <h1>Search Stocks</h1>
+            <form id="search-form">
+                <input type="text" id="stock-ticker" placeholder="Search by stock ticker..." aria-label="Search by stock ticker">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div id="stock-details" class="stock-details"></div>
+    </main>
+    <script src="api-config.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

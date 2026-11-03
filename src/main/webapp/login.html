@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html" class="logo">JoesStocks</a>
+        <div class="links">
+            <a href="index.html">Home/Search</a>
+            <a href="login.html">Login/Sign Up</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="login-section">
+            <h2>Login</h2>
+            <form id="login-form" method="GET" action="LoginServlet" >
+                Username <input type="text" name="signup-username" /><br />
+				Password <input type="password" name="signup-password" /><br />
+                <input type="submit" name="submit" value="Submit" />
+            </form>
+             <a href="index.html">Home/Search</a>
+        </div>
+        
+        <div class="signup-section">
+            <h2>Sign Up</h2>
+            <form id="signup-form" method="POST" action="RegisterServlet" >
+            	Email <input type="email" name="signup-email" /><br />
+				Username <input type="text" name="signup-username" /><br />
+				Password <input type="password" name="signup-password" /><br />
+				Confirm Password <input type="password" name="confirm-password" /><br />
+				<input type="submit" name="submit" value="Submit" />
+            </form>
+            <a href="index.html">Home/Search</a>
+        </div>
+        <script>
+		    window.onload = function() {
+		        const urlParams = new URLSearchParams(window.location.search);
+		        const error = urlParams.get('error');
+		        if (error) {
+		            let errorMessage = '';
+		            if (error === 'invalidLogin') {
+		                errorMessage = 'Invalid username or password.';
+		            } else if (error === 'registrationFailed') {
+		                errorMessage = 'Registration failed. Please try again.';
+		            }
+		            // Display the error message on your page
+		            alert(errorMessage); // For simplicity, using an alert; replace with your error display mechanism
+		        }
+    };
+</script>
+    </div>
+</body>
+</html>

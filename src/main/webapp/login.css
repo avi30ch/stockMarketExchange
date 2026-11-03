@@ -1,0 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Or any preferred background color */
+}
+
+.top-bar {
+    background-color: #5A4FCF;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.login-section, .signup-section {
+    margin: 0 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* You can adjust the width as needed */
+}
+
+.login-section h2, .signup-section h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #8B0000; /* Color to match the top bar */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4938b3; /* A darker shade for hover effect */
+}
